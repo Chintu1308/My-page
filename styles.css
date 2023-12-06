@@ -7,8 +7,7 @@ body {
     background: url('images/bg.jpg') center/cover no-repeat;
     height: 100vh;
     font-family: 'Arial', sans-serif;
-    transition: background 0.5s ease; /* Smooth transition for the background */
-}
+    transition: background 0.5s ease; 
 
 .menu_main {
     position: fixed;
@@ -157,7 +156,7 @@ body {
     background: url('images/bg.jpg') center/cover no-repeat;
     height: 100vh;
     font-family: 'Arial', sans-serif;
-    transition: background 0.5s ease; /* Smooth transition for the background */
+    transition: background 0.5s ease; 
 }
 
 .menu_main {
@@ -267,12 +266,12 @@ h1 {
 }
 
 .about-left {
-    flex-basis: 80%; /* Adjust the width of the left side as needed */
-    padding-right: 20px; /* Adjust the padding between left and right sides */
+    flex-basis: 80%;
+    padding-right: 20px;
 }
 
 .about-right {
-    flex-basis: 40%; /* Adjust the width of the right side as needed */
+    flex-basis: 40%; 
 }
 
 
@@ -318,7 +317,7 @@ h1 {
 
 .gallery img {
     width: 100%;
-    max-width: 300px; /* Adjust the max-width of each photo as needed */
+    max-width: 300px; 
     height: auto;
     margin-bottom: 20px;
 }
@@ -331,7 +330,7 @@ h1 {
 }
 
 .square-gallery img {
-    width: 30%; /* Adjust the width of each square photo as needed */
+    width: 30%; 
     height: auto;
     margin-bottom: 20px;
 }
