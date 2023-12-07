@@ -8,7 +8,7 @@ body {
     height: 100vh;
     font-family: 'Arial', sans-serif;
     transition: background 0.5s ease; 
-
+}
 .menu_main {
     position: fixed;
     top: 0;
