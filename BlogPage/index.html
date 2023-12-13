@@ -2,8 +2,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <br><title>My Blogs</title></br>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+
+   
+    <title>My Blogs</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <style>
@@ -84,11 +86,20 @@
             text-align: left; /* Align to the right */
         }
 
+        .blog-link button {
+            background-color: #F5F2E8;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
         .right-image {
             position: fixed;
             top: 240;
-    	    right: 8;
-   	    width: 408px;
+            right: 8;
+            width: 408px;
             height: 56vh;
             background: url('images/pen.jpg') center/cover no-repeat;
         }
@@ -121,9 +132,9 @@
     <div class="right-image"></div>
 
     <div class="blog-container">
-        <h1 class="blog-title">My Blogs</h1>
-        <a class="blog-link" href="Blogs/Blog1.pdf">WHAT I SEE IN IT?</a>
-	<a class="blog-link" href="Blogs/Blog2.pdf">Dad's Message</a>
+        <br><br><h1 class="blog-title">My Blogs</h1></br></br>
+        <a class="blog-link" href="Blogs/Blog1.html" target="_blank"><button><i>B1: </i> WHAT I SEE IN IT?</button></a>
+        <a class="blog-link" href="Blogs/Blog2.html" target="_blank"><button><i>B2: </i> Dad's Message</button></a>
         <!-- Add more blog links as needed -->
     </div>
 
