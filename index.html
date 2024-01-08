@@ -274,6 +274,29 @@
         #contact li {
             margin-bottom: 10px;
         }
+
+	.projects-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .project-column {
+        text-align: left; /* Align to the left */
+        margin-bottom: 20px; /* Add margin between title/description and video */
+    }
+
+    .project-video {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .project-video iframe {
+        width: 100%;
+        height: 100%;
+        transform: scale(0.8); /* Adjust the scale factor as needed */
+    }
     </style>
 </head>
 
@@ -288,6 +311,7 @@
                 <li><a href="#About">About</a></li>
                 <li><a href="#MyWork">My Work</a></li>
                 <li><a href="BlogPage/index.html">Blogs</a></li>
+		<li><a href="#Projects">Projects</a></li>
                 <li><a href="#Contact">Contact</a></li>
             </ul>
         </div>
@@ -356,6 +380,18 @@
             </div>
         </div>
     </div>
+<div class="projects" id="Projects">
+    <div class="project-column">
+        <h2>Projects</h2>
+        <p>Check out my latest project about Unveiling Audio Secrets: Explore the World of Different Audio File Types in this enlightening video. From the uncompressed brilliance of WAV and AIFF to the space-saving magic of MP3 and AAC, discover the intricacies that shape our audio experiences. Delve into the realms of OGG, FLAC, and MIDI, understanding how each format influences sound quality, file size, and application. Join us for a visually compelling exploration, breaking down the complexities of audio file types for both novices and enthusiasts. Decode the mysteries behind professional music production, online streaming, and gaming applications, gaining insights into the preferred formats for diverse scenarios. Uncover the magic behind the notes with MIDI, and appreciate the balance between quality and efficiency in the world of audio file formats</p>
+    </div>
+    <div class="project-column">
+        <div class="project-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2ecp8nNKtOw?si=nKPLZecAu3YSb0eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
 		
     <div id="Contact">
         <h2>Contact</h2>
