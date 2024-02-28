@@ -15,9 +15,29 @@
             overflow-x: hidden;
             background: url('images/bg.jpg') center/cover no-repeat;
             height: 100vh;
+            font-size: 16px;
             font-family: 'Arial', sans-serif;
             transition: background 0.5s ease;
         }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* CSS for screens smaller than 800px */
+@media screen and (max-width: 800px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* CSS for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
 
         /* Navigation styles */
         .menu_main {
@@ -116,6 +136,7 @@
             text-align: center;
             padding: 50px;
             transition: background 0.5s ease;
+            border-radius: 20px;
         }
 
         .overlay:hover {
@@ -168,6 +189,7 @@
         .about-right img {
             width: 100%; /* Updated width */
             height: auto;
+            border-radius: 25px;
         }
 
         /* My Work section styles */
@@ -229,6 +251,7 @@
             max-width: 300px;
             height: auto;
             margin-bottom: 20px;
+            border-radius: 25px;
         }
 
         .square-gallery {
@@ -241,6 +264,7 @@
             width: 30%;
             height: auto;
             margin-bottom: 20px;
+            border-radius: 25px;
         }
 
         /* Contact section styles */
@@ -295,7 +319,7 @@
     .project-video iframe {
         width: 100%;
         height: 100%;
-        transform: scale(0.8); /* Adjust the scale factor as needed */
+        transform: scale(0.7); /* Adjust the scale factor as needed */
     }
     
 
