@@ -4,103 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Hari Hara Charan Bongu</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
     <style>
-
-.container {
-    display: flex;
-    flex-direction: column; /* Align children vertically */
-    align-items: center; /* Center children horizontally */
-}
-
-
-.navbar {
-    display: flex;
-    justify-content: space-between; /* Divide navbar into two halves */
-    align-items: center;
-    height: 6rem;
-    padding: 1rem;
-    background-color: var(--white);
-    border: 1px solid var(--white);
-    border-radius: 50px;
-    box-shadow: var(--shadow-green);
-}
-
-.navbar-left {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-right {
-    display: flex;
-    justify-content: center; /* Center the navbar right part */
-    align-items: center;
-}
-
-.navbar-icons {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content: flex-end; /* Push icons to the right */
-}
-
-.navbar-icon {
-    margin-left: 1rem;
-    margin-right: 1rem; /* Add margin between icons */
-    cursor: pointer;
-}
-
-.navbar-logo {
-    height: 4rem;
-    width: auto;
-    margin-right: 1rem;
-}
-
-.navbar-icon a {
-    text-decoration: none;
-            color: #000;
-            font-weight: bold;
-            font-size: 16px;
-            transition: color 0.3s ease-in-out;
-}
-    
-
-.navbar-icon i {
-    font-size: 2rem;
-    color: var(--green-dark);
-}
-
-.navbar-icon span {
-    opacity: 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--green);
-    margin-left: -4rem;
-    transition: opacity 0.1s ease, margin-left 0.4s ease;
-}
-
-.active.navbar-icon {
-    background-color: var(--green-light-opacity);
-    border-radius: 35px;
-}
-
-.active.navbar-icon i {
-    color: var(--green);
-}
-
-.active.navbar-icon span {
-    opacity: 1;
-    margin-left: 0.8rem;
-}
-
         /* Additional styles and animations go here */
         body {
             margin: 0;
@@ -113,14 +20,9 @@
             transition: background 0.5s ease;
         }
 
-       
-
-
-
 .container {
-    margin-top: 2rem; /* Adjust spacing between navbar and content */
-    width: 80%; /* Adjust container width as needed */
-    
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* CSS for screens smaller than 800px */
@@ -229,19 +131,16 @@
         }
 
         .overlay {
-            background: rgba(255, 255, 255, 0);
-            color: #ffffff;
+            background: rgba(255, 255, 255, 0.8);
+            color: #000;
             text-align: center;
-            font-family: "Open Sans", sans-serif;
             padding: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(7px);
             transition: background 0.5s ease;
-            border-radius: 8px;
+            border-radius: 20px;
         }
 
         .overlay:hover {
-            background: rgba(255, 255, 255, 0);
+            background: rgba(255, 255, 255, 0.9);
         }
 
         h1 {
@@ -428,42 +327,21 @@
 </head>
 
 <body class="bg-image">
-    
 
-    <nav class="navbar">
-        <div class="navbar-left">
-            <img src="images/logo.png" alt="Logo" class="navbar-logo">
+    <div class="menu_main">
+        <div class="menu_left">
+            <img src="images/logo.png" alt="Logo">
         </div>
-        <div class="navbar-right">
-            <ul class="navbar-icons">
-                <a href="#About">
-                <li class="navbar-icon">
-                    <i class="fa-regular fa-circle-user"></i>
-                    <span>About</a></span>
-                </li>
-                <li class="navbar-icon">
-                    <a href="#MyWork">
-                    <i class="fa-solid fas fa-award"></i>
-                    <span>My Work</a></span>
-                </li>
-                <li class="navbar-icon">
-                    <a href="#Projects">
-                    <i class="fa-solid fas fa-laptop-code"></i>
-                    <span>Projects</a></span>
-                </li>
-                <li class="navbar-icon">
-                    <a href="BlogPage/index.html">
-                    <i class="fa-solid fas fa-book-reader"></i>
-                    <span>Blogs</a></span>
-                </li>
-                <li class="navbar-icon">
-                    <a href="#Contact">
-                    <i class="fa-solid fas fa-address-card"></i>
-                    <span>Contact</a></span>
-                </li>
+        <div class="menu_right">
+            <ul>
+                <li><a href="#About">About</a></li>
+                <li><a href="#MyWork">My Work</a></li>
+                <li><a href="BlogPage/index.html">Blogs</a></li>
+		<li><a href="#Projects">Projects</a></li>
+                <li><a href="#Contact">Contact</a></li>
             </ul>
         </div>
-    </nav>
+    </div>
 
     <div class="content">
         <div class="overlay">
@@ -476,7 +354,7 @@
                     <img src="images/linkedin.png" alt="LinkedIn">
                 </a>
 		<a href="https://www.github.com/Chintu1308">
-			<img src="images/git2.png" alt="GitHub">
+			<img src="images/github.png" alt="GitHub">
 		</a>
             </div>
         </div>
@@ -572,31 +450,6 @@
                 button.classList.remove('animate');
             }, 1000); 
         }
-
-
-        let links = document.querySelectorAll(".navbar-icon");
-      const navbar = document.querySelector(".navbar");
-      let isDark = false;
-      const clearActive = () => {
-        for (link of links) link.classList.remove("active");
-      };
-
-      for (link of links) {
-        link.onmouseover = function () {
-          clearActive();
-          this.classList.add("active");
-        };
-      }
-
-      const changeAppearance = () => {
-        if (!isDark) {
-          navbar.classList.add("dark");
-          isDark = !isDark;
-        } else {
-          navbar.classList.remove("dark");
-          isDark = !isDark;
-        }
-      };
     </script>
 
 </body>
