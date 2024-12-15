@@ -2,9 +2,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Personal website of Hari Hara Charan Bongu. Showcasing work, projects, and more.">
+<meta name="keywords" content="Bongu Hari Hara Charan, bhhc, BHHC, Bongu, binge_watcher, Hari haran, Charan, Hari Hara Charan, portfolio, projects, contact">
+
     <title>Hari Hara Charan Bongu</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -13,6 +15,26 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
     <style>
+
+:root {
+    --white: #ffffff;
+    --green-dark: #2e7d32;
+    --green: #66bb6a;
+    --green-light-opacity: rgba(102, 187, 106, 0.1);
+    --shadow-green: 0 4px 6px rgba(102, 187, 106, 0.4);
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #121212;
+        color: #ffffff;
+    }
+    .navbar {
+        background-color: #1e1e1e;
+    }
+}
+
 
 .container {
     display: flex;
@@ -412,6 +434,10 @@
         margin-bottom: 20px; /* Add margin between title/description and video */
     }
 
+    .project-column h2 {
+        text-align: center;
+    }
+
     .project-video {
         max-width: 100%;
         overflow: hidden;
@@ -422,6 +448,8 @@
         height: 100%;
         transform: scale(0.7); /* Adjust the scale factor as needed */
     }
+
+    
     
 
     </style>
@@ -472,7 +500,7 @@
                 <a href="https://www.instagram.com/binge_watcher._/">
                     <img src="images/instagram.png" alt="Instagram">
                 </a>
-                <a href="https://www.linkedin.com/in/harihara-charan-bongu-21b931276">
+                <a href="https://www.linkedin.com/in/bongu-hari-hara-charan-21b931276?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2FGjMruqSQwS1MLQSr9NHDg%3D%3D">
                     <img src="images/linkedin.png" alt="LinkedIn">
                 </a>
 		<a href="https://www.github.com/Chintu1308">
@@ -506,6 +534,29 @@
         </div>
     </div>
 
+    <div class="projects" id="Projects">
+        <div class="project-column">
+            <h2>Projects</h2>
+            <h4>project0</h4>
+            <p>Check out my latest project about Unveiling Audio Secrets: Explore the World of Different Audio File Types in this enlightening video. From the uncompressed brilliance of WAV and AIFF to the space-saving magic of MP3 and AAC, discover the intricacies that shape our audio experiences. Delve into the realms of OGG, FLAC, and MIDI, understanding how each format influences sound quality, file size, and application. Join us for a visually compelling exploration, breaking down the complexities of audio file types for both novices and enthusiasts. Decode the mysteries behind professional music production, online streaming, and gaming applications, gaining insights into the preferred formats for diverse scenarios. Uncover the magic behind the notes with MIDI, and appreciate the balance between quality and efficiency in the world of audio file formats</p>
+        </div>
+        <div class="project-column">
+            <div class="project-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2ecp8nNKtOw?si=nKPLZecAu3YSb0eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <h4>Project1</h4>
+    <p>Join me in unraveling the secrets of computer science in this short yet insightful video! Inspired by Harvard's CS50 course, I break down the basics of computer functioning and demonstrate how code transforms into machine language. Packed with practical tips and techniques, including a special focus on debugging, this video is perfect for beginners and enthusiasts alike. Get ready to level up your coding skills and unlock the mysteries of computer science with ease. </p>
+        </div>
+        <div class="project-column">
+            <div class="project-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DjBwLnOdAT8?si=jfk-uqQRvZ1pknN9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <div class="my-work" id="MyWork">
         <div class="my-work">
             <h2>My Work</h2>
@@ -528,17 +579,7 @@
             </div>
         </div>
     </div>
-<div class="projects" id="Projects">
-    <div class="project-column">
-        <h2>Projects</h2>
-        <p>Check out my latest project about Unveiling Audio Secrets: Explore the World of Different Audio File Types in this enlightening video. From the uncompressed brilliance of WAV and AIFF to the space-saving magic of MP3 and AAC, discover the intricacies that shape our audio experiences. Delve into the realms of OGG, FLAC, and MIDI, understanding how each format influences sound quality, file size, and application. Join us for a visually compelling exploration, breaking down the complexities of audio file types for both novices and enthusiasts. Decode the mysteries behind professional music production, online streaming, and gaming applications, gaining insights into the preferred formats for diverse scenarios. Uncover the magic behind the notes with MIDI, and appreciate the balance between quality and efficiency in the world of audio file formats</p>
-    </div>
-    <div class="project-column">
-        <div class="project-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/2ecp8nNKtOw?si=nKPLZecAu3YSb0eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
+
 
 
     <div id="Contact">
@@ -551,7 +592,7 @@
                     <a href="https://www.instagram.com/binge_watcher._/">
                         <img src="images/instagram.png" alt="Instagram">
                     </a>
-                    <a href="https://www.linkedin.com/in/harihara-charan-bongu-21b931276">
+                    <a href="https://www.linkedin.com/in/bongu-hari-hara-charan-21b931276?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2FGjMruqSQwS1MLQSr9NHDg%3D%3D">
                         <img src="images/linkedin.png" alt="LinkedIn">
                     </a>
 		    <a href="https://www.github.com/Chintu1308">
