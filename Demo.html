@@ -2,11 +2,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Personal website of Hari Hara Charan Bongu. Showcasing work, projects, and more.">
-<meta name="keywords" content="Bongu Hari Hara Charan, bhhc, BHHC, Bongu, binge_watcher, Hari haran, Charan, Hari Hara Charan, portfolio, projects, contact">
-
     <title>Hari Hara Charan Bongu</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -16,36 +14,31 @@
     />
     <style>
 
+/* Global Styles */
 :root {
-    --white: #ffffff;
-    --green-dark: #2e7d32;
-    --green: #66bb6a;
-    --green-light-opacity: rgba(102, 187, 106, 0.1);
-    --shadow-green: 0 4px 6px rgba(102, 187, 106, 0.4);
+    --green: #4CAF50;
+    --green-dark: #388E3C;
+    --green-light-opacity: rgba(76, 175, 80, 0.1);
+    --shadow-green: 0 4px 8px rgba(76, 175, 80, 0.2);
+    --white: #fff;
+    --black: #000;
 }
 
-
-@media (prefers-color-scheme: dark) {
-    body {
-        background: #121212;
-        color: #ffffff;
-    }
-    .navbar {
-        background-color: #1e1e1e;
-    }
+body {
+    margin: 0;
+    padding: 0;
+    background: url('images/bg.jpg') center/cover no-repeat;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+    transition: background 0.5s ease;
 }
 
-
-.container {
-    display: flex;
-    flex-direction: column; /* Align children vertically */
-    align-items: center; /* Center children horizontally */
-}
-
-
+/* Navigation Bar */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Divide navbar into two halves */
+    justify-content: space-between;
     align-items: center;
     height: 6rem;
     padding: 1rem;
@@ -53,6 +46,7 @@
     border: 1px solid var(--white);
     border-radius: 50px;
     box-shadow: var(--shadow-green);
+    z-index: 1000;
 }
 
 .navbar-left {
@@ -62,7 +56,7 @@
 
 .navbar-right {
     display: flex;
-    justify-content: center; /* Center the navbar right part */
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -71,29 +65,26 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    justify-content: flex-end; /* Push icons to the right */
+    justify-content: flex-end;
 }
 
 .navbar-icon {
     margin-left: 1rem;
-    margin-right: 1rem; /* Add margin between icons */
     cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .navbar-logo {
     height: 4rem;
-    width: auto;
     margin-right: 1rem;
 }
 
 .navbar-icon a {
     text-decoration: none;
-            color: #000;
-            font-weight: bold;
-            font-size: 16px;
-            transition: color 0.3s ease-in-out;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 16px;
 }
-    
 
 .navbar-icon i {
     font-size: 2rem;
@@ -106,350 +97,227 @@
     font-weight: 600;
     color: var(--green);
     margin-left: -4rem;
-    transition: opacity 0.1s ease, margin-left 0.4s ease;
+    transition: opacity 0.3s ease, margin-left 0.4s ease;
 }
 
-.active.navbar-icon {
+.navbar-icon:hover {
     background-color: var(--green-light-opacity);
     border-radius: 35px;
 }
 
-.active.navbar-icon i {
+.navbar-icon:hover i {
     color: var(--green);
 }
 
-.active.navbar-icon span {
+.navbar-icon:hover span {
     opacity: 1;
     margin-left: 0.8rem;
 }
 
-        /* Additional styles and animations go here */
-        body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            background: url('images/bg.jpg') center/cover no-repeat;
-            height: 100vh;
-            font-size: 16px;
-            font-family: 'Arial', sans-serif;
-            transition: background 0.5s ease;
-        }
-
-       
-
-
-
+/* Container */
 .container {
-    margin-top: 2rem; /* Adjust spacing between navbar and content */
-    width: 80%; /* Adjust container width as needed */
-    
+    margin-top: 2rem;
+    width: 80%;
 }
 
-/* CSS for screens smaller than 800px */
 @media screen and (max-width: 800px) {
     .container {
         width: 100%;
     }
 }
 
-/* CSS for screens smaller than 600px */
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    padding: 50px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    transition: background 0.5s ease;
+}
+
+.welcome:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.welcome h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.welcome p {
+    margin-top: 20px;
+}
+
+/* About Me Section */
+.about-me {
+    background: var(--white);
+    color: var(--black);
+    padding: 20px;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.about-me:hover {
+    transform: scale(1.02);
+}
+
+.about-left {
+    flex-basis: 60%;
+    padding-right: 20px;
+}
+
+.about-right {
+    flex-basis: 40%;
+}
+
+.about-right img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* My Work Section */
+.my-work {
+    background: var(--white);
+    color: var(--black);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.my-work h2 {
+    margin-bottom: 10px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    width: 48%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Photo Gallery Section */
+#photo-collection {
+    background: var(--white);
+    color: var(--black);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+/* Contact Section */
+#contact {
+    background: var(--white);
+    color: var(--black);
+    padding: 20px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+#contact:hover {
+    transform: scale(1.02);
+}
+
+#contact h2 {
+    margin-bottom: 10px;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact li {
+    margin-bottom: 10px;
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--green-dark);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media Queries */
 @media screen and (max-width: 600px) {
     body {
         font-size: 14px;
     }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbar-left, .navbar-right {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .welcome h1 {
+        font-size: 2rem;
+    }
+
+    .about-me, .my-work, #contact, #photo-collection {
+        padding: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .video-container iframe {
+        width: 100%;
+    }
 }
 
-        /* Navigation styles */
-        .menu_main {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            display: flex;
-            background: white;
-            z-index: 1000;
-        }
-
-        .menu_left {
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease; /* Added animation on hover */
-        }
-
-        .menu_left:hover {
-            transform: scale(1.1);
-        }
-
-        .menu_left img {
-            width: 80px;
-            margin-bottom: 20px;
-        }
-
-        .menu_right {
-            flex-grow: 1;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .menu_right ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        .menu_right li {
-            margin-left: 20px;
-            transition: transform 0.3s ease; /* Added animation on hover */
-        }
-
-        .menu_right li:hover {
-            transform: scale(1.1);
-        }
-
-        .menu_right a {
-            text-decoration: none;
-            color: #000;
-            font-weight: bold;
-            font-size: 16px;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .menu_right a:hover {
-            color: #7caeff;
-        }
-
-        /* Welcome section styles */
-        .welcome {
-            text-align: center;
-            padding: 50px;
-            color: #fff;
-            background: rgba(0, 0, 0, 0.5);
-            transition: background 0.5s ease;
-        }
-
-        .welcome:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-
-        .welcome h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-
-        .welcome p {
-            margin-top: 20px;
-        }
-
-        /* Content section styles */
-        .content {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 60px;
-        }
-
-        .overlay {
-            background: rgba(255, 255, 255, 0);
-            color: #ffffff;
-            text-align: center;
-            font-family: "Open Sans", sans-serif;
-            padding: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(7px);
-            transition: background 0.5s ease;
-            border-radius: 8px;
-        }
-
-        .overlay:hover {
-            background: rgba(255, 255, 255, 0);
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        .social-icons {
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            margin: 0 15px;
-            display: inline-block;
-        }
-
-        .social-icons img {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-        }
-
-        /* About Me section styles */
-        .about-me {
-            background: white;
-            color: #000;
-            padding: 20px;
-            width: 100%;
-            margin-top: 20px;
-            display: flex;
-            transition: transform 0.3s ease; /* Added animation on hover */
-        }
-
-        .about-me:hover {
-            transform: scale(1.02);
-        }
-
-        .about-left {
-            flex-basis: 80%;
-            padding-right: 20px;
-        }
-
-        .about-right {
-            flex-basis: 40%;
-        }
-
-        .about-right img {
-            width: 100%; /* Updated width */
-            height: auto;
-            border-radius: 25px;
-        }
-
-        /* My Work section styles */
-        .my-work {
-            background: white;
-            color: #000;
-            padding: 20px;
-            width: 100%;
-            margin-top: 20px;
-            transition: transform 0.3s ease; /* Added animation on hover */
-        }
-
-        .my-work:hover {
-            transform: scale(1.02);
-        }
-
-        .my-work h2 {
-            margin-bottom: 10px;
-        }
-
-        .video-container {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .video-container iframe {
-            width: 48%;
-            box-sizing: border-box;
-        }
-
-        /* Photo Collection section styles */
-        #photo-collection {
-            background: white;
-            color: #000;
-            padding: 20px;
-            width: 100%;
-            margin-top: 20px;
-            transition: transform 0.3s ease; /* Added animation on hover */
-        }
-
-        #photo-collection:hover {
-            transform: scale(1.02);
-        }
-
-        #photo-collection h2 {
-            text-align: center;
-        }
-
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .gallery img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            margin-bottom: 20px;
-            border-radius: 25px;
-        }
-
-        .square-gallery {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .square-gallery img {
-            width: 30%;
-            height: auto;
-            margin-bottom: 20px;
-            border-radius: 25px;
-        }
-
-        /* Contact section styles */
-        #contact {
-            background: white;
-            color: #000;
-            padding: 20px;
-            width: 100%;
-            margin-top: 20px;
-            transition: transform 0.3s ease; /* Added animation on hover */
-        }
-
-        #contact:hover {
-            transform: scale(1.02);
-        }
-
-        #contact h2 {
-            margin-bottom: 10px;
-        }
-
-        #contact p {
-            margin-bottom: 20px;
-        }
-
-        #contact ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #contact li {
-            margin-bottom: 10px;
-        }
-
-	.projects-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    .project-column {
-        text-align: left; /* Align to the left */
-        margin-bottom: 20px; /* Add margin between title/description and video */
-    }
-
-    .project-column h2 {
-        text-align: center;
-    }
-
-    .project-video {
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    .project-video iframe {
-        width: 100%;
-        height: 100%;
-        transform: scale(0.7); /* Adjust the scale factor as needed */
-    }
-
-    
     
 
     </style>
@@ -500,7 +368,7 @@
                 <a href="https://www.instagram.com/binge_watcher._/">
                     <img src="images/instagram.png" alt="Instagram">
                 </a>
-                <a href="https://www.linkedin.com/in/bongu-hari-hara-charan-21b931276?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2FGjMruqSQwS1MLQSr9NHDg%3D%3D">
+                <a href="https://www.linkedin.com/in/harihara-charan-bongu-21b931276">
                     <img src="images/linkedin.png" alt="LinkedIn">
                 </a>
 		<a href="https://www.github.com/Chintu1308">
@@ -534,29 +402,6 @@
         </div>
     </div>
 
-    <div class="projects" id="Projects">
-        <div class="project-column">
-            <h2>Projects</h2>
-            <h4>project0</h4>
-            <p>Check out my latest project about Unveiling Audio Secrets: Explore the World of Different Audio File Types in this enlightening video. From the uncompressed brilliance of WAV and AIFF to the space-saving magic of MP3 and AAC, discover the intricacies that shape our audio experiences. Delve into the realms of OGG, FLAC, and MIDI, understanding how each format influences sound quality, file size, and application. Join us for a visually compelling exploration, breaking down the complexities of audio file types for both novices and enthusiasts. Decode the mysteries behind professional music production, online streaming, and gaming applications, gaining insights into the preferred formats for diverse scenarios. Uncover the magic behind the notes with MIDI, and appreciate the balance between quality and efficiency in the world of audio file formats</p>
-        </div>
-        <div class="project-column">
-            <div class="project-video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/2ecp8nNKtOw?si=nKPLZecAu3YSb0eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-    
-    <h4>Project1</h4>
-    <p>Join me in unraveling the secrets of computer science in this short yet insightful video! Inspired by Harvard's CS50 course, I break down the basics of computer functioning and demonstrate how code transforms into machine language. Packed with practical tips and techniques, including a special focus on debugging, this video is perfect for beginners and enthusiasts alike. Get ready to level up your coding skills and unlock the mysteries of computer science with ease. </p>
-        </div>
-        <div class="project-column">
-            <div class="project-video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/DjBwLnOdAT8?si=jfk-uqQRvZ1pknN9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-
     <div class="my-work" id="MyWork">
         <div class="my-work">
             <h2>My Work</h2>
@@ -579,7 +424,17 @@
             </div>
         </div>
     </div>
-
+<div class="projects" id="Projects">
+    <div class="project-column">
+        <h2>Projects</h2>
+        <p>Check out my latest project about Unveiling Audio Secrets: Explore the World of Different Audio File Types in this enlightening video. From the uncompressed brilliance of WAV and AIFF to the space-saving magic of MP3 and AAC, discover the intricacies that shape our audio experiences. Delve into the realms of OGG, FLAC, and MIDI, understanding how each format influences sound quality, file size, and application. Join us for a visually compelling exploration, breaking down the complexities of audio file types for both novices and enthusiasts. Decode the mysteries behind professional music production, online streaming, and gaming applications, gaining insights into the preferred formats for diverse scenarios. Uncover the magic behind the notes with MIDI, and appreciate the balance between quality and efficiency in the world of audio file formats</p>
+    </div>
+    <div class="project-column">
+        <div class="project-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2ecp8nNKtOw?si=nKPLZecAu3YSb0eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
 
 
     <div id="Contact">
@@ -592,7 +447,7 @@
                     <a href="https://www.instagram.com/binge_watcher._/">
                         <img src="images/instagram.png" alt="Instagram">
                     </a>
-                    <a href="https://www.linkedin.com/in/bongu-hari-hara-charan-21b931276?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2FGjMruqSQwS1MLQSr9NHDg%3D%3D">
+                    <a href="https://www.linkedin.com/in/harihara-charan-bongu-21b931276">
                         <img src="images/linkedin.png" alt="LinkedIn">
                     </a>
 		    <a href="https://www.github.com/Chintu1308">
